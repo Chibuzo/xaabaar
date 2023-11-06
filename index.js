@@ -8,6 +8,10 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
 });
+
+app.post('/contact-email', (res, req) => {
+
+});
 // if not in production use the port 5000
 const PORT = process.env.PORT || 80;
 app.set('port', PORT);
